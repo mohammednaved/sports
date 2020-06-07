@@ -176,13 +176,13 @@ public class Team implements Parcelable {
 	private String strDescriptionPT;
 
 	@Json(name = "strLeague6")
-	private Object strLeague6;
+	private String strLeague6;
 
 	@Json(name = "strDescriptionDE")
 	private String strDescriptionDE;
 
 	@Json(name = "strLeague7")
-	private Object strLeague7;
+	private String strLeague7;
 
 	@Json(name = "strLeague")
 	private String strLeague;
