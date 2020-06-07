@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">sport</string>
+    <string name="message_perform_search">Search about your favourite team to get more information</string>
+    <string name="message_results_not_found">No Results Found</string>
+</resources>
