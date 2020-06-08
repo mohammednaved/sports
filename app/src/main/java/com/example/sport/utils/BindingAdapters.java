@@ -6,6 +6,10 @@ import androidx.databinding.BindingAdapter;
 
 import com.squareup.picasso.Picasso;
 
+/***
+ * Binding adapters for data binding
+ */
+
 public class BindingAdapters {
     @BindingAdapter("android:src")
     public static void loadImage(ImageView view, String url) {

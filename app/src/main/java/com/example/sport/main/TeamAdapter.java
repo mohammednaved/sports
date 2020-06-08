@@ -41,6 +41,7 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamViewHolder> {
     }
 
     public void addData(ArrayList<Team> teams) {
+        this.mTeams.clear();
         this.mTeams.addAll(teams);
         notifyDataSetChanged();
     }

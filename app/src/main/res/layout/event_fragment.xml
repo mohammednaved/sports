@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.sport.main.MainViewModel" />
+            type="com.example.sport.events.EventViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,15 +16,16 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/team_recycler"
+            android:id="@+id/events_recycler"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:visibility="@{viewModel.showNoData ? View.GONE : View.VISIBLE}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
+            android:padding="16dp"
+            android:clipToPadding="false"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
@@ -36,49 +37,21 @@
             android:visibility="@{viewModel.showLoading ? View.VISIBLE : View.GONE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/team_recycler"
+            app:layout_constraintStart_toStartOf="@+id/events_recycler"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <LinearLayout
-            android:id="@+id/search_container"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="@{viewModel.showPerformActionMessage ? View.VISIBLE : View.GONE}"
-            app:layout_constraintBottom_toBottomOf="@+id/team_recycler"
-            app:layout_constraintEnd_toEndOf="@+id/team_recycler"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/search_placeholder"
-                android:layout_width="200dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center_horizontal"
-                app:srcCompat="@drawable/ic_search_hint" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/margin_normal"
-                android:gravity="center"
-                android:text="@string/message_perform_search" />
-        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/message_results_not_found"
+            android:text="No upcoming Events"
             android:textSize="@dimen/text_size_normal"
             android:textStyle="italic"
             android:visibility="@{viewModel.showNoData ? View.VISIBLE : View.GONE}"
-            app:layout_constraintBottom_toBottomOf="@+id/team_recycler"
-            app:layout_constraintEnd_toEndOf="@+id/team_recycler"
+            app:layout_constraintBottom_toBottomOf="@+id/events_recycler"
+            app:layout_constraintEnd_toEndOf="@+id/events_recycler"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.sport.data.remote.Team;
 import com.example.sport.databinding.FragmentDetailBinding;
@@ -41,6 +42,9 @@ public class DetailFragment extends Fragment {
         ArrayList<String> leagues = getLeagues();
         LeagueAdapter leagueAdapter = new LeagueAdapter(leagues);
         mBinding.recyclerLeague.setAdapter(leagueAdapter);
+        mBinding.btnUpcomingEvents.setOnClickListener(v -> {
+            NavHostFragment.findNavController(this).navigate(DetailFragmentDirections.actionDetailFragmentToEventFragment(mTeam.getIdTeam()));
+        });
     }
 
     @NotNull
