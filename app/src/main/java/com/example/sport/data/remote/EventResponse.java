@@ -5,7 +5,7 @@ import com.squareup.moshi.Json;
 import java.util.List;
 
 public class EventResponse {
-    @Json(name = "events")
+    @Json(name = "results")
     private List<Event> events;
 
     public List<Event> getEvents() {
