@@ -7,7 +7,7 @@
 
         <variable
             name="team"
-            type="com.example.sport.data.remote.Team" />
+            type="com.demoapp.sport.data.remote.Team" />
     </data>
 
     <ScrollView

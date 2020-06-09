@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.sport.events.EventViewModel" />
+            type="com.demoapp.sport.events.EventViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

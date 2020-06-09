@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.sport.main.MainFragment"
+        android:name="com.demoapp.sport.main.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main" >
         <action
@@ -17,18 +17,18 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.sport.detail.DetailFragment"
+        android:name="com.demoapp.sport.detail.DetailFragment"
         android:label="DetailFragment" >
         <argument
             android:name="team"
-            app:argType="com.example.sport.data.remote.Team" />
+            app:argType="com.demoapp.sport.data.remote.Team" />
         <action
             android:id="@+id/action_detailFragment_to_eventFragment"
             app:destination="@id/eventFragment" />
     </fragment>
     <fragment
         android:id="@+id/eventFragment"
-        android:name="com.example.sport.events.EventFragment"
+        android:name="com.demoapp.sport.events.EventFragment"
         android:label="EventFragment" >
         <argument
             android:name="id"
